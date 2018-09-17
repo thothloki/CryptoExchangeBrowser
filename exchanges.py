@@ -1,5 +1,4 @@
-import requests
-import json
+import requests, json
 
 exchangeList = ['MapleExchange', 'TradeOgre']
 tradingPairs = []
@@ -7,11 +6,12 @@ tradingPairs = []
 class MapleExchange:
     def getPairs():
         try:
+            tradingPairs = []
             URL = 'https://maplechange.com:443//api/v2/markets.json'
-            r2 = requests.get(url = URL)
-            markets = r2.json()
-            for item in markets:
-                tradingPairs.append(item['name'])
+            req = requests.get(url = URL)
+            markets = req.json()
+            for pair in markets:
+                tradingPairs.append(pair['name'])
             return tradingPairs
         except:
             pass
@@ -35,9 +35,10 @@ class MapleExchange:
 class TradeOgre:
     def getPairs():
         try:
+            tradingPairs = []
             URL = 'https://tradeogre.com/api/v1/markets'
-            r2 = requests.get(url = URL)
-            markets = r2.json()
+            req = requests.get(url = URL)
+            markets = req.json()
             for item in markets:
                 for pair in item.keys():
                     tradingPairs.append(pair)
@@ -59,6 +60,3 @@ class TradeOgre:
             return values
         except:
             pass
-        
-
-     
