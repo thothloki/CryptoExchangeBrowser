@@ -12,7 +12,7 @@ from exchanges import MapleExchange, TradeOgre
 class App (QWidget):
     def __init__(self):
         super().__init__()
-        self.title = 'Crypto Exchange Coin Values'
+        self.title = 'Crypto Exchange Coin Values  v1.0.1'
         
         self.defineGUI()
         self.updateMainCoins()
