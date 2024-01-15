@@ -21,7 +21,3 @@ Exchanges in the works to be added:
 - Cryptopia
 
 If you leave it open for a while and want to check another coin, make sure to click the "Update Prices" button to update the main coins prices
-
-
-If you find this app useful and want to buy me a beer. 
-https://github.com/thothloki/CryptoExchangeBrowser/blob/master/Donate
